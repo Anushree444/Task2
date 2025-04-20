@@ -40,7 +40,7 @@ Serial.println(potpin);
  {
     digitalWrite(dir,HIGH);
  }
- else if(Serial_data=='d');
+ else if(Serial_data=='d')
  {
   digitalWrite(dir, LOW);
 
