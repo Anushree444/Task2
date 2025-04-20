@@ -1,3 +1,15 @@
+While attempting to control the motor speed and direction using the potentiometer, the initial mapping from the potentiometer values (ranging from 0 to 1023) to motor control values (0 to 255) did not provide the expected results. The motor speed control did not respond as intended, likely due to fluctuating or unstable potentiometer readings.
+
+To address this, it became necessary to determine the actual range of the potentiometer and map it accurately to the motor control range. By reading the raw analog values from the potentiometer and observing the fluctuations, we could ensure that the motor speed control operates within the correct range and responds consistently.
+
+This led to:
+
+Identifying the true range of the potentiometer from 0 to 1023 (instead of 0 to 255).
+
+Implementing a stable value mapping from the potentiometer's full range to the motor's speed control.
+
+By determining the potentiometer’s actual range, we were able to improve the reliability of motor control, prevent erratic behavior, and achieve smoother, more predictable motor responses.
+
 #Approach to Determine the Range of the Potentiometer
 To determine the range of the potentiometer connected to the analog input pin (ury), the following steps were taken:
 
